@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centre de Jeux - Compteur Enfants</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #c0c0d17a;
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #66bb6a;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .flashinfo {
+      background-color: #fff3cd;
+      padding: 10px;
+      text-align: center;
+      color: #856404;
+      font-size: 1rem;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .counter-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .counter-value {
+      font-size: 80px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .counter-buttons button {
+      font-size: 30px;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .counter-buttons button:hover {
+      background-color: #1b5e20;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="C:\Users\HP EITEBOOK\Downloads\logo_definitif-removebg-preview (1).png" align="right" width="160"></img>
+    <img src="C:\Users\HP EITEBOOK\Downloads\OIP-removebg-preview (1).png" align="left" width="130"></img>
+    <h1>Centre de Jeux pour Enfants</h1>
+  </header>
+
+  <nav>
+    <a href="ACCUEIL C2GNTECH.html">Accueil</a>
+    <a href="#">Recettes</a>
+    <a href="#">Médias</a>
+    <a href="#">Guides</a>
+    <a href="#">Administration</a>
+    <a href="#">Infos</a>
+    <a href="#">Fermer</a>
+  </nav>
+
+  <div class="flashinfo">
+    <marquee>Système de gestion du centre de jeux - Bienvenue et Soyez à l’aise !!!</marquee>
+  </div>
+
+  <div class="container">
+    <div class="counter-box">
+      <h2>Compteur d'enfants</h2>
+      <div class="counter-value" id="counter">0</div>
+      <div class="counter-buttons">
+      
+        <button onclick="resetCounter()">Réinitialiser</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact : +225 21 25 43 83 | Site : <a href="https://projetmartialkouman.netlify.app" style="color:white;">projetmartialkouman.netlify.app</a></p>
+  </footer>
+
+  <script>
+    let count = 0;
+
+    function updateDisplay() {
+      document.getElementById("counter").textContent = count;
+    }
+
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        updateDisplay();
+      }
+    }
+
+    function resetCounter() {
+      count = 0;
+      updateDisplay();
+    }
+  </script>
+
+</body>
+</html>
